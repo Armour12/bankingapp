@@ -55,5 +55,11 @@ public class AccountController {
         return ResponseEntity.ok(accounts);
     }
 
+    //Delete Account Rest API
+    @DeleteMapping("/{id}")
+    public ResponseEntity<String> deleteAccount(@PathVariable Long id){
+        accountService.deleteAccount(id);
+        return ResponseEntity.ok("Success Account Deleted");
+    }
 
 }

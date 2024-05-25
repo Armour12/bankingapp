@@ -14,5 +14,6 @@ public interface AccountService {
 
     AccountDto withDraw(Long id, double amount);
     List<AccountDto> getAllAccounts();
+    void deleteAccount(Long id);
 
 }
