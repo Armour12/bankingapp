@@ -2,6 +2,8 @@ package com.dhruv.bankingapp.service;
 
 import com.dhruv.bankingapp.dto.AccountDto;
 
+import java.util.List;
+
 
 public interface AccountService {
     AccountDto createAccount(AccountDto account);
@@ -9,5 +11,8 @@ public interface AccountService {
     AccountDto getAccountById(Long id);
 
     AccountDto deposit(Long id, double amount);
+
+    AccountDto withDraw(Long id, double amount);
+    List<AccountDto> getAllAccounts();
 
 }
